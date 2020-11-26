@@ -1,4 +1,4 @@
-// 1. Вариант на if else на регулярных выражениях asd
+// 1. Вариант на if else на регулярных выражениях asd dasd 123
 
 let year = prompt('Please enter your age','');                          // Просим ввести свой возраст
 
