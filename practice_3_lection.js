@@ -95,7 +95,7 @@ switch (true) {
 let year = prompt('Please enter your age','');
 
 let year10 = Math.floor(year % 10);
-let year100 = Math.floor(year % 100);
+let year100 = M  ath.floor(year % 100);
 
 if (isNaN(year) || year === '' || !year.trim()) {
     alert('Please enter only one number');
