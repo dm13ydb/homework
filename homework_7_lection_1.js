@@ -64,18 +64,18 @@ do {
     if (rows === null) {
         break;
     }
-} while(checkPromptForNumbers(rows) === false);
+} while(!checkPromptForNumbers(rows));
 
-if (checkPromptForNumbers(rows) === true) {
+if (checkPromptForNumbers(rows)) {
     do {
         columns = prompt('Please enter number of columns', '');
         if (columns === null) {
             break;
         }
-    } while(checkPromptForNumbers(columns) === false);
+    } while(!checkPromptForNumbers(columns));
 }
 
-if (checkPromptForNumbers(columns) === true) {
+if (checkPromptForNumbers(columns)) {
     array = createArray(rows, columns);
     fillArray(array);
     console.log(array);
