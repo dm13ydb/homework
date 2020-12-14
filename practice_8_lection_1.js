@@ -2,7 +2,7 @@ function factory(arr) {
     let i = 0;
     return function() {
         if (i >= arr.length){
-            alert('Out of Array Elements');
+            alert('Out of Array Elements. Function reseted');
             i = 0;
             return null;
         }

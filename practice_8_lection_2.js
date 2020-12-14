@@ -1,9 +1,13 @@
 function factory(arr) {
     let i = 0;
     return function(callback) {
+        if (i >= arr.length){
+            alert('Out of Array Elements. Function reseted');
+            i = 0;
+            return null;
+        }
         if (callback) {
-            let j = arr[i++];
-            return callback(j);
+            return callback(arr[i++]);
         } else {
             return arr[i++];
         }
@@ -26,3 +30,9 @@ console.log(step(sqr));
 console.log(step(sqr));
 console.log(step(sqr));
 console.log(step(sqr));
+console.log(step(cube));
+console.log(step(cube));
+console.log(step(cube));
+console.log(step(cube));
+console.log(step(cube));
+console.log(step(cube));
