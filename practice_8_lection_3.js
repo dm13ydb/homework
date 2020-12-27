@@ -13,7 +13,7 @@ function getMaxArgs() {
 function getMaxArrValue(arr) {
     let MaxValue = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length) {
+        if (Array.isArray(arr[i])) {
             let temp = getMaxArrValue(arr[i]);
             if (temp > MaxValue) {
                 MaxValue = temp;
