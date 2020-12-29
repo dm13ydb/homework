@@ -19,11 +19,12 @@ let myMethods = {
         let result = '';
         for (let i = 0; i < this.length; i++) {
             if(this[i] === null || this[i] === undefined) {
-                result += '' + separator;
-            } else if (i === this.length - 1) {
-                result += this[i];
+                result += '';
             } else {
-                result += this[i] + separator;
+                result += this[i];
+            }
+            if(i !== this.length - 1) {
+                result += separator;
             }
         }
         return result;
