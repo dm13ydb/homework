@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='practice_16_lection.css'>
+</head>
+<body>
+    <select class='figure_select'>
+        <option value='default' disabled selected>Select one</option>
+        <option value='square'>Square</option>
+        <option value='rectangle'>Rectangle</option>
+        <option value='circle'>Circle</option>
+    </select>
+    <form class='options hide'>
+        <fieldset>
+            <legend class='title'></legend>
+            <label class='size'>
+                Size: 
+                <input type="number" name="size">
+            </label>
+            <label class='width'>
+                Width: 
+                <input type="number" name="width">
+            </label>
+            <label class='height'>
+                Height: 
+                <input type="number" name="height">
+            </label>
+            <label class='color'>
+                Color: 
+                <input type="color" name="color">
+            </label>
+            <label class='text'>
+                Text: 
+                <input type="text" name="text">
+            </label>
+            <input type="submit" name="submit" value='Draw'>
+        </fieldset>
+    </form>
+    <div class='container'></div>
+    <script src='practice_16_lection.js'></script>
+</body>
+</html>

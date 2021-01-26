@@ -1,0 +1,29 @@
+.body {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .options {
+    margin: 10px 0;
+ }
+ 
+ label {
+    display: block;
+    margin: 10px 0;
+ }
+ 
+ .hide {
+    display: none;
+ }
+ 
+ .container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+ }
+ 
+ .figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
