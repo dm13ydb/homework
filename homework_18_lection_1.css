@@ -1,0 +1,126 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.users-table {
+   display: table;
+   width: 100%;
+   margin: 5px 15px;
+}
+
+.users-table__header {
+   display: table-header-group;
+   background-color: #343a40;
+   color: white;
+}
+
+.users-table__row {
+   display: table-row;
+   
+}
+
+.users-table__column:first-child,
+.users-table__column:nth-child(4) {
+   display: table-column;
+   width: 5%;
+}
+
+.users-table__column:nth-child(2),
+.users-table__column:nth-child(3) {
+   display: table-column;
+   width: 10%;
+}
+
+.users-table__column:nth-child(5),
+.users-table__column:nth-child(6) {
+   display: table-column;
+   width: 20%;
+}
+
+.users-table__column:last-of-type {
+   display: table-column;
+   width: 30%;
+}
+
+.users-table__row li,
+.users-table__header li {
+   display: table-cell;
+   padding: 10px;
+   border-bottom: 1px solid #d6dbe0;
+}
+
+fieldset {
+   border: none;
+}
+
+input:not([type="checkbox"]):not([type="submit"]):not([type="button"]),
+textarea {
+   display: block;
+   width: 50%;
+}
+
+input,
+textarea {
+   border: 1px solid #d6dbe0;
+   border-radius: 5px;
+   margin-top: 5px;
+   margin-bottom: 15px;
+   padding: 5px 10px;
+}
+
+input[type="submit"],
+input.users-control-room__add-button,
+.users-table__action-btn_view,
+.users-table__action-btn_remove {
+   background-color: #007bff;
+   border: none;
+   color: white;
+   margin-left: 15px;
+   padding: 10px;
+}
+
+input.users-control-room__add-button {
+   background-color: #93ca03;
+   color: white;
+}
+
+input[type='submit']:active,
+input[type='button']:active {
+   color: black;
+}
+
+input.users-table__action-btn_edit:active {
+   color: white;
+}
+
+input[type='submit']:focus,
+input[type='button']:focus {
+   outline: none;
+}
+
+
+fieldset:last-of-type label {
+   margin-right: 10px;
+}
+
+.users-table__action-btn {
+   margin: 0;
+   margin-right: 5px;
+   padding: 5px 10px;
+   border: none;
+   float: left;
+}
+
+.users-table__action-btn_remove {
+   background-color: #dd3545;
+}
+
+.users-control-room__form {
+   display: none;
+}
+
+.show {
+   display: block;
+}

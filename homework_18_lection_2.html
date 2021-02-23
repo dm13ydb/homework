@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>User CRUD</title>
+  <link rel="stylesheet" href="homework_18_lection_2.css">
+</head>
+<body>
+  <div class="users-control-room">
+    <input type="button" value="Add new user" class="users-control-room__add-button">
+    <div class="users-table">
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <div class="users-table__column"></div>
+      <ul class="users-table__header">
+        <li>ID</li>
+        <li>Name</li>
+        <li>Surname</li>
+        <li>Age</li>
+        <li>Adress</li>
+        <li>Skills</li>
+        <li>Actions</li>
+      </ul>
+    </div>
+    <form class="users-control-room__form">
+      <fieldset>
+        <label>
+          Name
+          <input type="text" name="name" maxlength='20' required>
+        </label>
+        <label>
+          Surname
+          <input type="text" name="surname" maxlength='20' required>
+        </label>
+        <label>
+          Age
+          <input type="number" name="age" min="1" max="120">
+        </label>
+        <label>
+          Adress
+          <textarea name="adress" maxlength='60'></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input type="checkbox" name="skills" value="js">JS
+        </label>
+        <label>
+          <input type="checkbox" name="skills" value="python">Python
+        </label>
+        <label>
+          <input type="checkbox" name="skills" value="php">PHP
+        </label>
+      </fieldset>
+     <input type="submit" value="Save">
+    </form>
+  <script src="homework_18_lection_2.js"></script>
+</body>
+</html>
