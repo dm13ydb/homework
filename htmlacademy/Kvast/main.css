@@ -1,0 +1,621 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    min-width: 1040px;
+    color: #404040;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper-800 {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.wrapper-1015 {
+    width: 1015px;
+    margin: 0 auto;
+}
+
+.page-header {
+    background: black bottom/cover url('img/wheat-back.jpg') no-repeat;
+    padding-top: 60px;
+    min-height: 490px;
+}
+
+.logo {
+    float: left;
+    width: 140px;
+    height: 76px;
+}
+
+.header-top {
+    margin-bottom: 120px;
+}
+
+.main-nav {
+    float: right;
+    width: 600px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 50px;
+    padding: 14px 0 13px 0;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    color: #ffcb78;
+    border-bottom: 1px solid white;
+    padding-bottom: 19px;
+}
+
+.main-nav a:active {
+    color: rgba(255, 203, 120, 0.3);
+}
+
+.header-promo {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.new-items {
+    margin: 80px 0;
+}
+
+.section-title,
+.item__name {
+    font-size: 40px;
+    line-height: 60px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.items {
+    margin-top: 75px;
+}
+
+.item {
+    position: relative;
+    float: left;
+    width: 398px;
+    height: 759px;
+    border-left: 1px solid #e5e5e5;
+}
+
+.item:last-child {
+    border-right: 1px solid #e5e5e5;
+}
+
+.item__name {
+    margin: 0 0 25px 34px;
+}
+
+.item table {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    right: 25px;
+    width: 150px;
+}
+
+
+.item table td {
+    border: 1px solid #e5e5e5;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.item__composition {
+    position: absolute;
+    width: 150px;
+    right: 25px;
+    top: 164px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #404040;
+}
+
+.item__img {
+    padding-top: 5px;
+    padding-left: 44px;
+}
+
+.item__description {
+    margin: 0;
+    padding: 0 34px;
+}
+
+.item__options {
+    padding: 60px 0 0 34px;
+}
+
+.btn {
+    float: left;
+    text-decoration: none;
+    border: 2px solid #834700;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn:hover {
+    border-color: #6a3900;
+}
+
+.item__details {
+    color: #834700;
+    margin-right: 7px;
+}
+
+.item__details:hover {
+    color: #6a3900;
+}
+
+.item__details:active {
+    border-color: #d2c3b2;
+    color: #f5f3f1;
+}
+
+.item__buy {
+    color: white;
+    background-color: #834700;
+    margin-right: 25px;
+}
+
+.item__buy:hover {
+    border-color: #6b3b02;
+    background-color: #6a3900;
+}
+
+.item__buy:active {
+    border-color: #6b3b02;
+    color: #a08874;
+}
+
+.item__price {
+    font-weight: bold;
+    color: black;
+    float: left;
+    margin-top: 10px;
+}
+
+.features {
+    padding-top: 80px;
+    background-color: #ffcb78;
+    height: 330px;
+}
+
+.features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 1015px;
+    height: 240px;
+}
+
+.features ul li {
+    float: left; 
+    width: 210px;
+    height: 240px;
+    border-right: 1px solid #e5b66c;
+    padding-right: 95px;
+}
+
+.features ul li:nth-child(2) {
+    width: 210px;
+    padding-left: 95px;
+}
+
+.features ul li:last-child {
+    border-color: transparent;
+    padding-right: 0;
+    padding-left: 95px;
+}
+
+.features .feature-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+    padding-top: 83px;
+    margin-bottom: 20px;
+}
+
+.features ul li::before {
+    content: '';
+    display: table;
+    position: absolute;
+    width: 50px;
+    height: 68px;
+    background: url('img/icon-brew.png') no-repeat;
+}
+
+.features ul li:nth-child(2):before {
+    width: 46px;
+    height: 65px;
+    background: url('img/icon-matreshka.png') no-repeat;
+}
+
+.features ul li:last-child::before {
+    width: 63px;
+    height: 58px;
+    background: url('img/icon-thumbsup.png') no-repeat;
+}
+
+.history {
+    margin-top: 80px;
+}
+
+.history dl {
+    margin-top: 60px;
+}
+
+.history dt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.history dt i {
+    float: right;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
+    width: 196px;
+}
+
+.history dt i a {
+    color: #834700;
+}
+
+.history dt i a:hover {
+    color: #6a3900;
+}
+
+.history dt i a:active {
+    color: #cab7a2;
+}
+
+.history dd {
+    margin: 0;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.history dd img {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.history dd p {
+    width: 490px;
+}
+
+.press {
+    padding-top: 47px;
+    padding-bottom: 90px;
+    background-color: #ede5d8;
+}
+
+.press blockquote {
+    position: relative;
+    margin: 0;
+    margin-top: 75px;
+}
+
+.press blockquote p {
+    position: relative;
+    width: 690px;
+    margin-bottom: 35px;
+}
+
+.press blockquote p::before {
+    content: '';
+    display: table;
+    position: absolute;
+    width: 41px;
+    height: 31px;
+    left: -105px;
+    top: 5px;
+    background: url('img/quotes.png') no-repeat;
+}
+
+.press blockquote cite {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    font-style: normal;
+    text-transform: uppercase;
+    width: 330px;
+}
+
+.btn.press__more {
+    border-color: #a5a097;
+    color: #bcb6ab;
+}
+
+.btn.press__more:hover {
+    background-color: #a5a097;
+    color: white;
+}
+
+.btn.press__more:active {
+    border-color: #8f8a81;
+    background-color: #8f8a81;
+    color: #a29e96;
+}
+
+.assortment {
+    margin: 90px 0;
+}
+
+.assortment table {
+    margin-top: 75px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.assortment table th {
+    text-align: left;
+    font-size: 11px;
+    color: #999999;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.assortment table td {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 17px 0;
+    text-transform: uppercase;
+}
+
+.assortment table td:last-child,
+.assortment table th:last-child {
+    text-align: right;
+}
+
+.assortment table td:first-child {
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    width: 402px;
+}
+
+.assortment table td:nth-child(2) {
+    width: 92px;
+}
+
+.assortment table td:nth-child(3) {
+    width: 62px;
+}
+
+.assortment table td sup {
+    margin-left: 20px;
+    font-size: 8px;
+    color: white;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.order {
+    background-color: #ffcb78;
+    padding-top: 47px;
+    padding-bottom: 110px;
+}
+
+.order p {
+    width: 660px;
+    margin-top: 75px
+}
+
+.order form {
+    margin-top: 70px;
+    width: 630px;
+}
+
+.order form label {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+.order form input[type='text'],
+.order form input[type='email'],
+.order form textarea {
+    background-color: #e5b66c;
+    border: none;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+.order form input:hover,
+.order form textarea:hover {
+    background-color: #d9ad66;
+}
+
+.order form input:focus,
+.order form textarea:focus {
+    background-color: white;
+}
+
+.order form select {
+    margin-bottom: 30px;
+}
+
+.order form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.form-group.left {
+    float: left;
+    width: 290px;
+}
+
+.form-group.right {
+    float: right;
+    width: 290px;
+}
+
+.form-checkboxes {
+    margin-top: 6px;
+    margin-bottom: 34px;
+}
+
+.form-checkboxes label {
+    vertical-align: middle;
+}
+
+.form-checkboxes input {
+    margin: 0;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.btn.submit {
+    float: none;
+    background-color: #834700;
+    color: white;
+    font-size: inherit;
+    padding: 14px 20px;
+}
+
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: black;
+}
+
+.page-footer .footer-top {
+    margin-bottom: 47px;
+}
+
+.page-footer .logo {
+    margin-left: 37px;
+}
+
+.page-footer .main-nav {
+    margin-top: 7px;
+    margin-right: 107px;
+}
+
+.page-footer .footer-social {
+    float: left;
+    width: 216px;
+    font-size: 0;
+}
+
+.page-footer .footer-social a {
+    display: inline-block;
+    margin-left: -1px;
+    width: 70px;
+    height: 66px;
+    border: 1px solid #322d24;
+    background: #1b1b1b url('img/icon-fb.png') no-repeat center;
+}
+
+.page-footer .footer-social a:first-child {
+    background-image: url('img/icon-insta.png');
+}
+
+.page-footer .footer-social a:last-child {
+    background-image: url('img/icon-vk.png');
+}
+
+.page-footer .footer-copyright {
+    float: left;
+    width: 200px;
+    margin-left: 91px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #989898;
+}
+
+.page-footer .footer-htmlacademy {
+    float: right;
+    width: 300px;
+    margin-right: 8px;
+}
+
+.htmlacademy-logo {
+    float: left;
+    width: 70px;
+    height: 66px;
+    border: 1px solid #322d24;
+    background-color: #1b1b1b;
+    position: relative;
+}
+
+.footer-htmlacademy img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.htmlacademy-text {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: #989898;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.htmlacademy-text a {
+    color: #989898;
+    text-decoration: none;
+}
