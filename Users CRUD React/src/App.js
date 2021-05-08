@@ -7,12 +7,25 @@ import CrudTable from './CrudTable';
 import CrudForm from './CrudFrom';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { formIsHidden: true };
+  }
+
+  activateForm = () => {
+    this.setState({ formIsHidden: false });
+  };
+
   render() {
     return (
       <Container fluid>
         <Row>
           <Col>
-            <Button variant="success" className="btn-add">
+            <Button
+              variant="success"
+              className="btn-add"
+              onClick={this.activateForm}
+            >
               Add User
             </Button>
           </Col>
@@ -22,11 +35,7 @@ class App extends React.Component {
             <CrudTable />
           </Col>
         </Row>
-        <Row>
-          <Col xs={5}>
-            <CrudForm />
-          </Col>
-        </Row>
+        <CrudForm hidden={this.state.formIsHidden} />
       </Container>
     );
   }
