@@ -25,7 +25,6 @@ class CrudForm extends React.Component {
           ? event.target.checked
           : event.target.value,
     });
-    console.log(this.state);
   };
 
   render() {
