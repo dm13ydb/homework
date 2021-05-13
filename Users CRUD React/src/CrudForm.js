@@ -5,31 +5,38 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 class CrudForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      surname: '',
-      age: '',
-      adress: '',
-      js: false,
-      phyton: false,
-      php: false,
-    };
-  }
-
   inputHandler = (event) => {
-    this.setState({
-      [event.target.name]:
-        event.target.type === 'checkbox'
-          ? event.target.checked
-          : event.target.value,
-    });
+    let data = this.props.data;
+
+    if (event.target.type === 'checkbox') {
+      let skills = data.skills.slice();
+
+      skills.includes(event.target.name)
+        ? (skills = skills.filter((skill) => skill !== event.target.name))
+        : skills.push(event.target.name);
+      data = { ...data, skills };
+    } else {
+      let input = { [event.target.name]: event.target.value };
+
+      data = { ...data, ...input };
+    }
+
+    this.props.updateForm(data);
   };
 
   render() {
     if (this.props.hidden) {
       return null;
+    }
+
+    let button = null;
+
+    if (this.props.submit) {
+      button = (
+        <Button variant="primary" type="submit" disabled={this.props.disabled}>
+          Submit
+        </Button>
+      );
     }
 
     return (
@@ -42,7 +49,8 @@ class CrudForm extends React.Component {
                 type="text"
                 name="name"
                 placeholder="Enter user name"
-                value={this.state.name}
+                disabled={this.props.disabled}
+                value={this.props.data.name}
                 onChange={this.inputHandler}
               ></Form.Control>
             </Form.Group>
@@ -52,7 +60,8 @@ class CrudForm extends React.Component {
                 type="text"
                 name="surname"
                 placeholder="Enter user surname"
-                value={this.state.surname}
+                disabled={this.props.disabled}
+                value={this.props.data.surname}
                 onChange={this.inputHandler}
               ></Form.Control>
             </Form.Group>
@@ -62,7 +71,8 @@ class CrudForm extends React.Component {
                 type="number"
                 name="age"
                 placeholder="Enter user age"
-                value={this.state.age}
+                disabled={this.props.disabled}
+                value={this.props.data.age}
                 max="125"
                 min="1"
                 onChange={this.inputHandler}
@@ -74,7 +84,8 @@ class CrudForm extends React.Component {
                 as="textarea"
                 name="adress"
                 placeholder="Enter user adress"
-                value={this.state.adress}
+                disabled={this.props.disabled}
+                value={this.props.data.adress}
                 rows={3}
                 onChange={this.inputHandler}
               ></Form.Control>
@@ -83,34 +94,35 @@ class CrudForm extends React.Component {
               <Form.Check
                 inline
                 type="checkbox"
-                name="js"
+                name="JS"
                 label="JS"
                 id="checkbox-js"
-                checked={this.state.js}
+                checked={this.props.data.skills.includes('JS')}
+                disabled={this.props.disabled}
                 onChange={this.inputHandler}
               />
               <Form.Check
                 inline
                 type="checkbox"
-                name="phyton"
-                label="Phyton"
-                id="checkbox-phyton"
-                checked={this.state.phyton}
+                name="Python"
+                label="Python"
+                id="checkbox-python"
+                checked={this.props.data.skills.includes('Python')}
+                disabled={this.props.disabled}
                 onChange={this.inputHandler}
               />
               <Form.Check
                 inline
                 type="checkbox"
-                name="php"
+                name="PHP"
                 label="PHP"
                 id="checkbox-php"
-                checked={this.state.php}
+                checked={this.props.data.skills.includes('PHP')}
+                disabled={this.props.disabled}
                 onChange={this.inputHandler}
               />
             </div>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            {button}
           </Form>
         </Col>
       </Row>

@@ -30,6 +30,16 @@ class CrudTable extends React.Component {
     };
   }
 
+  viewHandler = (userId) => {
+    let data = this.state.users.find((user) => user.id === userId);
+    this.props.viewButtonHandler(data);
+  };
+
+  editHandler = (userId) => {
+    let data = this.state.users.find((user) => user.id === userId);
+    this.props.editButtonHandler(data);
+  };
+
   render() {
     return (
       <Table striped bordered hover>
@@ -46,11 +56,16 @@ class CrudTable extends React.Component {
               <tr key={user.id}>
                 {this.state.headings.map((heading, index) => {
                   return heading === 'Actions' ? (
-                    <ActionsCell key={index} />
+                    <ActionsCell
+                      key={index}
+                      userId={user.id}
+                      viewHandler={this.viewHandler}
+                      editHandler={this.editHandler}
+                    />
                   ) : (
                     <td key={index}>
                       {Array.isArray(user[heading.toLowerCase()])
-                        ? user[heading.toLowerCase()].join(', ')
+                        ? user[heading.toLowerCase()].sort().join(', ')
                         : user[heading.toLowerCase()]}
                     </td>
                   );
