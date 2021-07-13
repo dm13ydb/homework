@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jack",
+    "surname": "White",
+    "age": 26,
+    "adress": "USA California",
+    "skills": [
+      "JS",
+      "Python"
+    ],
+    "active": true,
+    "id": 1
+  },
+  {
+    "name": "Bill",
+    "surname": "Jonson",
+    "age": 36,
+    "adress": "USA, California",
+    "skills": [
+      "JS",
+      "PHP"
+    ],
+    "active": true,
+    "id": 5
+  }
+]

@@ -1,0 +1,10 @@
+@import '~normalize.css';
+
+.btn-add,
+.btn[type='submit'] {
+  margin: 0.5rem 0;
+}
+
+.btn-action {
+  margin-right: 0.5rem;
+}
